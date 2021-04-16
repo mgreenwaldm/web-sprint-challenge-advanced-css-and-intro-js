@@ -230,4 +230,23 @@ button:hover {
     width: 100%;
 }
 
-@media only screen and (max-width: 500px) {}
+@media (max-width: 500px) {
+    .artists-container {
+        flex-direction: column;
+    }
+    .artist {
+        width: 100%;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    nav {
+        width: 50%;
+    }
+    nav a {
+        font-size: 1.75rem;
+    }
+    nav span {
+        border-left: 2px solid #626262;
+    }
+}
