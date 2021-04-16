@@ -268,8 +268,8 @@ function get20s(myArray) {
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(myArray) {
-  myArray.splice(0, 1);
+function removeArtist(myArray, removeIndex) {
+  myArray.splice(removeIndex, 1);
   return myArray.length
 }
 
@@ -300,7 +300,7 @@ function addArtist(myArray) {
     "nationality": "Hungarian",
     "bio": "Michael is awesome, struggles sometimes though..."
   })
-
+  return myArray;
 
 }
 
@@ -313,8 +313,12 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt( /*Your Code Here*/ ) {
-  /*Your Code Here*/
+function lotsOfArt(myArray) {
+  return myArray.filter(theThing => {
+    return theThing.paintings > 100;
+  }).map(myValues => {
+    return myValues.name
+  });
 }
 
 
